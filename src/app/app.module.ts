@@ -8,6 +8,8 @@ import { MenuComponent } from './components/menu/menu.component';
 import { ContentsComponent } from './components/contents/contents/contents/contents.component';
 import { ToolsToUseComponent } from './components/contents/tools-to-use/tools-to-use.component';
 import { ReviewToDotnetComponent } from './components/contents/review-to-dotnet/review-to-dotnet.component';
+import { ReviewToPooComponent } from './components/contents/review-to-poo/review-to-poo.component';
+import { ReviewToMvcComponent } from './components/contents/review-to-mvc/review-to-mvc.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ReviewToDotnetComponent } from './components/contents/review-to-dotnet/
     MenuComponent,
     ContentsComponent,
     ToolsToUseComponent,
-    ReviewToDotnetComponent
+    ReviewToDotnetComponent,
+    ReviewToPooComponent,
+    ReviewToMvcComponent
   ],
   imports: [
     BrowserModule,
