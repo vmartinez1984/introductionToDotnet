@@ -10,6 +10,9 @@ import { ToolsToUseComponent } from './components/contents/tools-to-use/tools-to
 import { ReviewToDotnetComponent } from './components/contents/review-to-dotnet/review-to-dotnet.component';
 import { ReviewToPooComponent } from './components/contents/review-to-poo/review-to-poo.component';
 import { ReviewToMvcComponent } from './components/contents/review-to-mvc/review-to-mvc.component';
+import { DependencyInjectionComponent } from './components/contents/dependency-injection/dependency-injection.component';
+import { PracticeOneComponent } from './components/contents/practice-one/practice-one.component';
+import { PracticeTwoComponent } from './components/contents/practice-two/practice-two.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { ReviewToMvcComponent } from './components/contents/review-to-mvc/review
     ToolsToUseComponent,
     ReviewToDotnetComponent,
     ReviewToPooComponent,
-    ReviewToMvcComponent
+    ReviewToMvcComponent,
+    DependencyInjectionComponent,
+    PracticeOneComponent,
+    PracticeTwoComponent
   ],
   imports: [
     BrowserModule,

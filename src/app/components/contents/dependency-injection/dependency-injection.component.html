@@ -1,0 +1,61 @@
+<h2 class="text-primary">Inyección de dependencias</h2>
+
+<p>¿Que es un constructor?
+    <br/>
+    Una forma de iniciar un objeto 
+</p>
+
+<div class="card" style="max-width:450px ;">
+    <div class="card-body">
+
+        <code>
+            <pre>
+    public class Person &lbrace;        
+
+        public Person() &lbrace;
+        &rbrace;
+                
+    &rbrace;
+            </pre>
+        </code>
+    </div>
+</div>
+
+<br/>
+<h2>Clase con constructor que solicita parametros</h2>
+<div class="card" style="max-width:450px ;">
+    <div class="card-body">
+
+        <code>
+            <pre>
+    public class Repository &lbrace;        
+        
+        private readonly string _connectionString;
+        public Repository(string connectionString) &lbrace;
+            _connectionString = connectionString
+        &rbrace;
+                
+        public int AddPerson(Person Person)&lbrace;
+            //Open connection and insert
+        &rbrace;
+
+    &rbrace;
+            </pre>
+        </code>
+    </div>
+</div>
+
+<br/>
+<p>
+    Teniendo estas dos ideas presentes de dos tipos de constructores 
+    <br/>
+    ¿Que pasaria si las clases a ocupar las instanciamos al inicio de la app?
+    <br/>
+    Es cierto, ocupara mucha memoria
+    <br/>
+    ¿Y si quien administra esto es la misma app?
+    <br/>
+    Entonces solo le diremos cual vamos a ocupar en una lista y cuando le digamos la tendra lista
+</p>
+
+<img src="assets/imgs/InyeccionDeDependencias.png" class="img-fluid img-thumbnail" />
