@@ -3,18 +3,18 @@
 <p>Estructura del proyecto <b>PointOfSale.BusinessLayer</b>, este es un proyecto del tipo libreria</p>
 
 <ul>
-    <li>Contexts</li>
-        <ul>
-            <li>Store.cs</li>
-        </ul>
+    <li>Repositories</li>
+    <ul>
+        <li>ProductRepository.cs (Store)</li>
+    </ul>
     <li>Entities</li>
-        <ul>
-            <li>Product.cs</li>
-        </ul>
-    <li>BusinessLayer</li>
-        <ul>
-            <li>PointOfSale</li>
-        </ul>
+    <ul>
+        <li>ProductEntity.cs</li>
+    </ul>
+    <li>BussinesLayer</li>
+    <ul>
+        <li>ProductBl.cs (Point of sale)</li>
+    </ul>
 </ul>
 
 <div class="card mb-3" style="max-width: 20rem;">
@@ -22,19 +22,28 @@
     <div class="card-body">
         <p class="card-text">+ int Id</p>
         <p class="card-text">+ string Name</p>
-        <p class="card-text">+ decimal Price</p>        
+        <p class="card-text">+ decimal Price</p>
     </div>
 </div>
 
+<p>
+    El repositorio es el almacen de donde se sacan los datos, es decir el origen de los datos, 
+    por ej la base de datos, un archivo de texto, json, xml o csv; una carpeta de imagenes o repo de  docs,
+    un servicio ApiRest o SOAP. Esta capa tmabien es llamada DAO (Data Access Object).
+ </p>
 <div class="card mb-3" style="max-width: 30rem;">
-    <div class="card-header">Store</div>
-    <div class="card-body">        
-        <p class="card-text">+ ProductEntity GetProductById(productId)</p>        
+    <div class="card-header">ProductRepository (Store)</div>
+    <div class="card-body">
+        <p class="card-text">+ ProductEntity GetProductById(productId)</p>
     </div>
 </div>
 
+<p>
+    Este es tambien llamado la capa de las reglas de negocio o de servicios es donde se concentra la logica 
+    del negocio, por ej. donde se validan los datos, se aplican las operaciones.
+</p>
 <div class="card mb-3" style="max-width: 20rem;">
-    <div class="card-header">PointOfSale</div>
+    <div class="card-header">ProductBl (PointOfSale BusinessLayer or Service)</div>
     <div class="card-body">
         <p class="card-text">+ AddProduct(Product)</p>
         <p class="card-text">+ GetTotal()</p>
@@ -47,13 +56,32 @@
     Agregue como referencia <b>PointOfSale</b> a <b>PointOfSale.Console</b>
 </p>
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+<h2 class="text-primary">Practica 1.1</h2>
+<p>En el repositorio agregue otra clase la cual  leera datos de un archivo txt, este archivo hara el enlace a la
+    base de datos u origen de datos (un archivo txt)
+</p>
+
+<div class="card mb-3" style="max-width: 30rem;">
+    <div class="card-header">ProductRepositoryTxt (Store)</div>
+    <div class="card-body">
+        <p class="card-text">- string Path</p>
+        <p class="card-text">- List&lt;ProductEntity&gt; ListOfProducts</p>
+        <hr/>
+        <p class="card-text">+ ProductEntity GetProductById(productId)</p>
+    </div>
+</div>
+
+<div class="card mb-3" style="max-width: 30rem;">
+    <div class="card-header">Products.txt (Store)</div>
+    <div class="card-body">
+        1|Cronicas del barrio | 450
+        <br/>
+        2|Pedro Paramo|200
+    </div>
+</div>
+
+
+<br />
+<br />
+<br />
+<br />

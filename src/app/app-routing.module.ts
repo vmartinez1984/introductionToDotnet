@@ -9,6 +9,7 @@ import { ReviewToMvcComponent } from './components/contents/review-to-mvc/review
 import { DependencyInjectionComponent } from './components/contents/dependency-injection/dependency-injection.component';
 import { PracticeOneComponent } from './components/contents/practice-one/practice-one.component';
 import { PracticeTwoComponent } from './components/contents/practice-two/practice-two.component';
+import { RecommendationsComponent } from './components/recommendations/recommendations.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'review-to-mvc', component: ReviewToMvcComponent},
   { path: 'dependency-injection', component :DependencyInjectionComponent},
   { path: 'practice-one', component: PracticeOneComponent},
-  { path: 'practice-two', component: PracticeTwoComponent}
+  { path: 'practice-two', component: PracticeTwoComponent},
+  { path: 'recommendations', component: RecommendationsComponent}
 ];
 
 @NgModule({
